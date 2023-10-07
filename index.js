@@ -5,10 +5,9 @@ require("./src/bot/bot");
   try {
     await bot.start({
       drop_pending_updates: true
-    }).then(() => {
-      console.log("Bot Started...");
     });
+    console.log("Bot Started...");
   } catch (error) {
-    console.log("Error Occured", error.message);
+    console.error("Error Occured", error.message);
   }
 })();
