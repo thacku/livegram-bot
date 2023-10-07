@@ -9,7 +9,7 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "free"
+      "size": "Basic"
     }
   },
   "repository": "https://github.com/Thacku/livegram-bot",
