@@ -9,6 +9,6 @@ require("./src/bot/bot");
       console.log("Bot Started...");
     });
   } catch (error) {
-    console.error("Error Occured", error.message);
+    console.log("Error Occured", error.message);
   }
 })();
