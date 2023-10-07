@@ -18,7 +18,7 @@ if (!process.env.START_MESSAGE || !START_MESSAGE) {
 }
 
 
-const bot = new Bot(process.env.BOT_TOKEN);
+const bot = new Bot(process.env.BOT_TOKEN || BOT_TOKEN);
 
 
 bot.catch((error) => {
