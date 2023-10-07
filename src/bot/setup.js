@@ -36,7 +36,6 @@ bot.catch((error) => {
 bot.use(async (ctx, next) => {
   try {
     if (ctx.chat.type != "private") return;
-    await bot.api.sendChatAction(ctx.chat.id, "typing");
     await next();
   } catch (error) {
     console.log("Error Occured", error.message);
