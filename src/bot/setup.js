@@ -1,25 +1,24 @@
 const { Bot, GrammyError, HttpError } = require("grammy");
-const { BOT_TOKEN, OWNER_ID, START_MESSAGE } = require("../config/config");
 require("dotenv").config();
 
 
-if (!process.env.BOT_TOKEN || !BOT_TOKEN) {
+if (!process.env.BOT_TOKEN) {
   console.log(`Invalid BOT_TOKEN`);
   return;
 }
 
-if (!process.env.OWNER_ID || !OWNER_ID) {
+if (!process.env.OWNER_ID) {
   console.log(`Invalid OWNER_ID`);
   return;
 }
 
-if (!process.env.START_MESSAGE || !START_MESSAGE) {
+if (!process.env.START_MESSAGE) {
   console.log(`Invalid START_MESSAGE`);
   return;
 }
 
 
-const bot = new Bot(process.env.BOT_TOKEN || BOT_TOKEN);
+const bot = new Bot(process.env.BOT_TOKEN);
 
 
 bot.catch((error) => {
