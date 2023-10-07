@@ -1,0 +1,21 @@
+{
+  "name": "livegram-bot",
+  "version": "1.0.0",
+  "description": "Livegram Bot which simplifies communication by collecting user inquiries, forwarding them to the respective owners, and ensuring swift responses. Enhance your user-owner interactions effortlessly with our Livegram Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "restart": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node index.js"
+  },
+  "keywords": [
+    "livegram-bot"
+  ],
+  "author": "thacku",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "grammy": "^1.19.0"
+  }
+}

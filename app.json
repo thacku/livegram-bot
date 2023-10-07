@@ -1,0 +1,28 @@
+{
+  "name": "Livegram Bot",
+  "description": "Livegram Bot which simplifies communication by collecting user inquiries, forwarding them to the respective owners, and ensuring swift responses. Enhance your user-owner interactions effortlessly with our Livegram Bot",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "repository": "https://github.com/Thacku/livegram-bot",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "A Bot token from @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "Telegram ID of the Owner",
+      "required": true,
+      "value": ""
+    }
+  }
+}
