@@ -1,10 +1,9 @@
 const bot = require("./setup");
-const { OWNER_ID, START_MESSAGE } = require("../config/config");
 require("dotenv").config();
 
 
-const owner = process.env.OWNER_ID || OWNER_ID;
-const start_message = process.env.START_MESSAGE || START_MESSAGE;
+const owner = process.env.OWNER_ID;
+const start_message = process.env.START_MESSAGE;
 
 
 bot.command("start", async (ctx) => {
