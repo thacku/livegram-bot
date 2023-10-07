@@ -1,13 +1,14 @@
 const bot = require("./setup");
-const owner = process.env.OWNER_ID;
-const start_message = process.env.START_MESSAGE;
+const { OWNER_ID, START_MESSAGE } = require("../config/config");
+const owner = process.env.OWNER_ID || OWNER_ID;
+const start_message = process.env.START_MESSAGE || START_MESSAGE;
 
 
 bot.command("start", async (ctx) => {
   try {
     await bot.api.sendMessage(ctx.chat.id, start_message, { parse_mode: "HTML" });
   } catch (error) {
-    console.log("Error Occured", error.message);
+    console.error("Error Occured", error.message);
   }
 });
 
@@ -24,6 +25,6 @@ bot.on("message", async (ctx) => {
       await bot.api.forwardMessage(owner, ctx.chat.id, ctx.message.message_id);
     }
   } catch (error) {
-    console.log("Error Occured", error.message);
+    console.error("Error Occured", error.message);
   }
 });
