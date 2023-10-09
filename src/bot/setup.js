@@ -1,5 +1,4 @@
 const { Bot, GrammyError, HttpError } = require("grammy");
-require("dotenv").config();
 
 
 if (!process.env.BOT_TOKEN) {
