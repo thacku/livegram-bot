@@ -1,5 +1,4 @@
 const bot = require("./setup");
-require("dotenv").config();
 
 
 const owner = process.env.OWNER_ID;
